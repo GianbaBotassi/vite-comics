@@ -13,4 +13,12 @@
     @else if $type =='around' {
         justify-content: space-around
     }
+
+    @else if $type =='start' {
+        justify-content: flex-start
+    }
+
+    @else if $type =='end' {
+        justify-content: flex-end
+    }
 }

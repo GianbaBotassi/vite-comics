@@ -96,6 +96,7 @@ header {
         li {
             height: 50px;
             @include flex-content(center);
+            border-bottom: 3px solid transparent;
 
             &.active {
                 border-bottom: 3px solid $blue;

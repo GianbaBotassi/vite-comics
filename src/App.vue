@@ -13,9 +13,13 @@ export default {
 <template>
   <div class="container">
     <AppHeader />
-    <div id="content">
-      Content goes here </div>
   </div>
+  <div id="content">
+    <div class="container">
+      Content goes here
+    </div>
+  </div>
+
   <AppFooter />
 </template>
 
