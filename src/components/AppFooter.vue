@@ -1,12 +1,18 @@
 <script>
-export default {
+import AppMerchandise from './components/AppMerchandise.vue'
 
+
+export default {
+    components: {
+        AppMerchandise,
+    },
     name: "AppFooter"
 }
 </script>
 
 <template>
     <footer>
+        <AppMerchandise />
         <div id="content-info" class="container">
             <div>
                 <h3>DC COMICS</h3>
