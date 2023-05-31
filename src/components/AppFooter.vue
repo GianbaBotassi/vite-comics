@@ -1,5 +1,5 @@
 <script>
-import AppMerchandise from './components/AppMerchandise.vue'
+import AppMerchandise from './AppMerchandise.vue'
 
 
 export default {
