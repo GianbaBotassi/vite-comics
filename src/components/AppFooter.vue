@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <h1>ciao sono il footer</h1>
+    <h1>Sono un footer</h1>
 </template>
 
 <style></style>

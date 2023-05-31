@@ -11,8 +11,19 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <AppFooter />
+  <div class="container">
+    <AppHeader />
+    <AppFooter />
+  </div>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@use 'styles/general' as *;
+@use 'styles/partials/mixins' as *;
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  width: 70%;
+}
+</style>
