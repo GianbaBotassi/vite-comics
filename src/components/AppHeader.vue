@@ -66,7 +66,7 @@ export default {
             <img src="../assets/img/dc-logo.png" alt="Logo">
         </div>
         <ul>
-            <li v-for="link in links">
+            <li v-for="link in links" :class="{ active: link.current }">
                 {{ link.text }}
             </li>
         </ul>
@@ -76,6 +76,7 @@ export default {
 <style lang="scss">
 @use 'styles/general' as *;
 @use 'styles/partials/mixins' as *;
+@use 'styles/partials/variables' as *;
 
 header {
     @include flex-content(between);
@@ -87,9 +88,22 @@ header {
     }
 
     ul {
-        width: 60%;
+        font-size: 0.7rem;
+        font-weight: 500;
         @include flex-content(center);
-        gap: 5px;
+        gap: 15px;
+
+        li {
+            height: 50px;
+            @include flex-content(center);
+
+            &.active {
+                border-bottom: 3px solid $blue;
+            }
+
+        }
+
+
     }
 }
 </style>
