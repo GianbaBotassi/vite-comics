@@ -17,9 +17,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use 'styles/partials/mixins' as *;
-@use 'styles/partials/variables' as *;
-
 .card {
     flex-basis: calc((100%/6) - 15px);
     height: 150px;

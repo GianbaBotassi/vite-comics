@@ -55,10 +55,8 @@ export default {
                     </div>
                     <div>{{ item.text }}</div>
                 </a>
-
             </li>
         </ul>
-
     </div>
 </template>
 

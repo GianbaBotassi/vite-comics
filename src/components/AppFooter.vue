@@ -121,9 +121,6 @@ export default {
                     <img src="../assets/img/dc-logo-bg.png" alt="logo-bg">
                 </div>
             </div>
-
-
-
         </div>
         <div id="foot-bar">
             <div id="foot-social" class="container">
@@ -154,7 +151,6 @@ export default {
                 </div>
             </div>
         </div>
-
     </footer>
 </template>
 
@@ -242,5 +238,6 @@ footer {
             }
         }
     }
-}</style>
+}
+</style>
 

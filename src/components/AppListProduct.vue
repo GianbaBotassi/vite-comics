@@ -64,6 +64,7 @@ section {
         #load-more {
             font-size: 0.5rem;
             text-align: center;
+            cursor: pointer;
         }
     }
 }
