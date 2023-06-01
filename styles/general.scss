@@ -1,3 +1,5 @@
+@use 'styles/partials/variables' as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -10,4 +12,16 @@ img {
 
 li {
     list-style: none;
+}
+
+a {
+    color: $white-font;
+    text-decoration: none;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 70%;
 }

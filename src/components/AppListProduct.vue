@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppHeader",
+    name: "AppListProduct",
     data() {
         return {
             links: [
@@ -61,49 +61,42 @@ export default {
 </script>
 
 <template>
-    <header class="container">
-        <div>
-            <img src="../assets/img/dc-logo.png" alt="Logo">
+    <section>
+        <div id="product-container" class="container">
+            <a class="card" href="#">
+                <div>
+                    <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+                </div>
+                <h6>Ciaooooo</h6>
+            </a>
         </div>
-        <ul>
-            <li v-for="link in links" :class="{ active: link.current }">
-                {{ link.text }}
-            </li>
-        </ul>
-    </header>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use 'styles/partials/mixins' as *;
 @use 'styles/partials/variables' as *;
 
-header {
-    @include flex-content(between);
-    height: 100px;
+section {
+    background-color: $dark-grey;
+}
 
-    img {
-        width: 70px;
-        height: 70px;
-    }
+#product-container {
+    background-color: red;
+    @include flex-content(center);
+    flex-wrap: wrap;
+    gap: 5px;
 
-    ul {
-        font-size: 0.7rem;
-        font-weight: 500;
-        @include flex-content(center);
-        gap: 15px;
-        height: 100%;
+    .card {
+        background-color: aqua;
+        height: 150px;
+        flex-basis: calc((100%/6) - 5px);
 
-        li {
-            height: 50px;
-            @include flex-content(center);
-            border-bottom: 3px solid transparent;
-            height: 100%;
-
-            &.active {
-                border-bottom: 3px solid $blue;
-                color: $blue;
-            }
+        div {
+            text-align: center;
         }
+
+
     }
 }
 </style>

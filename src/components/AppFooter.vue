@@ -6,77 +6,96 @@ export default {
     components: {
         AppMerchandise,
     },
-    name: "AppFooter"
+    name: "AppFooter",
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href
+        }
+    }
 }
 </script>
 
 <template>
     <footer>
         <AppMerchandise />
-        <div id="content-info" class="container">
-            <div>
-                <h3>DC COMICS</h3>
-                <ul>
-                    <li>Characters</li>
-                    <li>Comics</li>
-                    <li>Movies</li>
-                    <li>TV</li>
-                    <li>Games</li>
-                    <li>Videos</li>
-                    <li>News</li>
-                </ul>
-                <h3>SHOP</h3>
-                <ul>
-                    <li>Shop DC</li>
-                    <li>Shop DC COllectibles</li>
-                </ul>
-            </div>
-            <div>
-                <h3>DC COMICS</h3>
-                <ul>
-                    <li>Terms Of Use</li>
-                    <li>Privacy policy (New)</li>
-                    <li>Ad Choices</li>
-                    <li>Advertising</li>
-                    <li>Jobs</li>
-                    <li>Subscriptions</li>
-                    <li>Talent Workshops</li>
-                    <li>CPSC Certificates</li>
-                    <li>Ratings</li>
-                    <li>Shop Help</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-            <div>
-                <h3>SITES</h3>
-                <ul>
-                    <li>DC</li>
-                    <li>MAD Magazine</li>
-                    <li>DC Kids</li>
-                    <li>DC Universe</li>
-                    <li>DC Power Visa</li>
+        <div id="content-bg">
+            <div id="content-info" class="container">
+                <div>
+                    <h5>DC COMICS</h5>
+                    <ul>
+                        <li>Characters</li>
+                        <li>Comics</li>
+                        <li>Movies</li>
+                        <li>TV</li>
+                        <li>Games</li>
+                        <li>Videos</li>
+                        <li>News</li>
+                    </ul>
+                    <h5>SHOP</h5>
+                    <ul>
+                        <li>Shop DC</li>
+                        <li>Shop DC COllectibles</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>DC COMICS</h5>
+                    <ul>
+                        <li>Terms Of Use</li>
+                        <li>Privacy policy (New)</li>
+                        <li>Ad Choices</li>
+                        <li>Advertising</li>
+                        <li>Jobs</li>
+                        <li>Subscriptions</li>
+                        <li>Talent Workshops</li>
+                        <li>CPSC Certificates</li>
+                        <li>Ratings</li>
+                        <li>Shop Help</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>SITES</h5>
+                    <ul>
+                        <li>DC</li>
+                        <li>MAD Magazine</li>
+                        <li>DC Kids</li>
+                        <li>DC Universe</li>
+                        <li>DC Power Visa</li>
 
-                </ul>
+                    </ul>
+                </div>
+                <div id="dc-logo-bg">
+                    <img src="../assets/img/dc-logo-bg.png" alt="logo-bg">
+                </div>
             </div>
-            <div id="dc-logo-bg">
-                <img src="../assets/img/dc-logo-bg.png" alt="logo-bg">
-            </div>
+
+
 
         </div>
         <div id="foot-bar">
             <div id="foot-social" class="container">
-                <div id="foot-left">
+                <a id="foot-left" href="#">
                     SIGN-UP NOW!
-                </div>
+                </a>
                 <div id="foot-right">
                     <div id="follow">FOLLOW US</div>
                     <div id="social">
                         <div>
-                            <img src="../assets/img/footer-facebook.png" alt="facebook">
-                            <img src="../assets/img/footer-twitter.png" alt="twitter">
-                            <img src="../assets/img/footer-youtube.png" alt="youtube">
-                            <img src="../assets/img/footer-pinterest.png" alt="pinterest">
-                            <img src="../assets/img/footer-periscope.png" alt="periscope">
+                            <a href="#">
+                                <img src="../assets/img/footer-facebook.png" alt="facebook">
+                            </a>
+                            <a href="#">
+                                <img src="../assets/img/footer-twitter.png" alt="twitter">
+                            </a>
+                            <a href="#">
+                                <img src="../assets/img/footer-youtube.png" alt="youtube">
+                            </a>
+                            <a href="#">
+                                <img src="../assets/img/footer-pinterest.png" alt="pinterest">
+                            </a>
+                            <a href="#">
+                                <img src="../assets/img/footer-periscope.png" alt="periscope">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -86,14 +105,16 @@ export default {
     </footer>
 </template>
 
-<style lang="scss">
-@use 'styles/general' as *;
+<style lang="scss" scoped>
 @use 'styles/partials/mixins' as *;
 @use 'styles/partials/variables' as *;
 
 footer {
-    background-image: url(../assets/img/footer-bg.jpg);
-    height: 100%;
+    height: calc(100% - 200px);
+
+    #content-bg {
+        background-image: url(../assets/img/footer-bg.jpg);
+    }
 
     #content-info {
         display: flex;
@@ -104,7 +125,7 @@ footer {
         position: relative;
         overflow: hidden;
 
-        h3 {
+        h5 {
             margin-bottom: 15px;
         }
 
@@ -130,10 +151,6 @@ footer {
 
     }
 
-
-
-
-
     #foot-bar {
         font-size: 0.8rem;
         background-color: $grey;
@@ -147,6 +164,10 @@ footer {
                 border: 2px solid $blue;
                 color: $white-font;
                 padding: 10px;
+
+                &:hover {
+                    background-color: lighten($color: blue, $amount: 20%)
+                }
             }
 
             #foot-right {

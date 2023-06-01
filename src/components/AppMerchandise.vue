@@ -49,10 +49,12 @@ export default {
     <div id="merchandise">
         <ul class="container">
             <li v-for="item in items">
-                <div class="merch-img">
-                    <img :src="getImagePath(item.img)" alt="HELP">
-                </div>
-                <div>{{ item.text }}</div>
+                <a :href="item.url">
+                    <div class="merch-img">
+                        <img :src="getImagePath(item.img)" :alt="item.text">
+                    </div>
+                    <div>{{ item.text }}</div>
+                </a>
 
             </li>
         </ul>
@@ -60,8 +62,7 @@ export default {
     </div>
 </template>
 
-<style lang="scss">
-@use 'styles/general' as *;
+<style lang="scss" scoped>
 @use 'styles/partials/mixins' as *;
 @use 'styles/partials/variables' as *;
 
@@ -74,13 +75,13 @@ export default {
         color: $white-font;
         @include flex-content(around);
 
-        li {
+        li a {
             @include flex-content;
+            height: 30px;
             gap: 15px;
 
-            img {
-                height: 30px;
-                width: 25px;
+            .merch-img {
+                width: 30px;
             }
         }
     }
