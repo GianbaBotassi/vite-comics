@@ -6,12 +6,7 @@ export default {
     components: {
         AppMerchandise,
     },
-    name: "AppFooter",
-    methods: {
-        getImagePath: function (img) {
-            return new URL(`../assets/img/${img}`, import.meta.url).href
-        }
-    }
+    name: "AppFooter"
 }
 </script>
 

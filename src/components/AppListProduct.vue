@@ -1,60 +1,16 @@
 <script>
+import json from '../json/dc-comics.json'
+import AppProduct from './AppProduct.vue'
+
+
 export default {
     name: "AppListProduct",
+    components: {
+        AppProduct,
+    },
     data() {
         return {
-            links: [
-                {
-                    text: 'CHARACTERS',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'COMICS',
-                    url: '#',
-                    current: true
-                },
-                {
-                    text: 'MOVIES',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'TV',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'GAMES',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'COLLECTIBLES',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'VIDEOS',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'FANS',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'NEWS',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'SHOP',
-                    url: '#',
-                    current: false
-                },
-            ]
+            myJson: json
         }
     }
 }
@@ -63,12 +19,7 @@ export default {
 <template>
     <section>
         <div id="product-container" class="container">
-            <a class="card" href="#">
-                <div>
-                    <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-                </div>
-                <h6>Ciaooooo</h6>
-            </a>
+            <AppProduct v-for="(product, index) in myJson" :item="product" :key="index" />
         </div>
     </section>
 </template>
@@ -82,21 +33,9 @@ section {
 }
 
 #product-container {
-    background-color: red;
     @include flex-content(center);
     flex-wrap: wrap;
-    gap: 5px;
-
-    .card {
-        background-color: aqua;
-        height: 150px;
-        flex-basis: calc((100%/6) - 5px);
-
-        div {
-            text-align: center;
-        }
-
-
-    }
+    gap: 25px 15px;
+    padding: 30px 0;
 }
 </style>
