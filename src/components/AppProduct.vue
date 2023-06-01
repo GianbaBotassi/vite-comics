@@ -2,7 +2,7 @@
 export default {
     name: "AppProduct",
     props: {
-        item: Object
+        item: Object            //riferimento a item in AppListProduct (padre)
     }
 }
 </script>
@@ -10,7 +10,7 @@ export default {
 <template>
     <a class="card" href="#">
         <div>
-            <img :src="item.thumb" :alt="item.series">
+            <img :src="item.thumb" :alt="item.series"> <!-- uso item come riferimento per prendere dall'oggetto -->
         </div>
         <h6>{{ item.series }}</h6>
     </a>

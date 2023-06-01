@@ -16,46 +16,104 @@ export default {
         <div id="content-bg">
             <div id="content-info" class="container">
                 <div>
-                    <h5>DC COMICS</h5>
+                    <a href="#">
+                        <h5>DC COMICS</h5>
+                    </a>
                     <ul>
-                        <li>Characters</li>
-                        <li>Comics</li>
-                        <li>Movies</li>
-                        <li>TV</li>
-                        <li>Games</li>
-                        <li>Videos</li>
-                        <li>News</li>
+                        <a href="#">
+                            <li>Characters</li>
+                        </a>
+                        <a href="#">
+                            <li>Comics</li>
+                        </a>
+                        <a href="#">
+                            <li>Movies</li>
+                        </a>
+                        <a href="#">
+                            <li>TV</li>
+                        </a>
+                        <a href="#">
+                            <li>Games</li>
+                        </a>
+                        <a href="#">
+                            <li>Videos</li>
+                        </a>
+                        <a href="#">
+                            <li>News</li>
+                        </a>
                     </ul>
-                    <h5>SHOP</h5>
+                    <a href="#">
+                        <h5>SHOP</h5>
+                    </a>
                     <ul>
-                        <li>Shop DC</li>
-                        <li>Shop DC COllectibles</li>
+                        <a href="#">
+                            <li>Shop DC</li>
+                        </a>
+                        <a href="#">
+                            <li>Shop DC COllectibles</li>
+                        </a>
                     </ul>
                 </div>
                 <div>
-                    <h5>DC COMICS</h5>
+                    <a href="#">
+                        <h5>DC COMICS</h5>
+                    </a>
                     <ul>
-                        <li>Terms Of Use</li>
-                        <li>Privacy policy (New)</li>
-                        <li>Ad Choices</li>
-                        <li>Advertising</li>
-                        <li>Jobs</li>
-                        <li>Subscriptions</li>
-                        <li>Talent Workshops</li>
-                        <li>CPSC Certificates</li>
-                        <li>Ratings</li>
-                        <li>Shop Help</li>
-                        <li>Contact Us</li>
+                        <a href="#">
+                            <li>Terms Of Use</li>
+                        </a>
+                        <a href="#">
+                            <li>Privacy policy (New)</li>
+                        </a>
+                        <a href="#">
+                            <li>Ad Choices</li>
+                        </a>
+                        <a href="#">
+                            <li>Advertising</li>
+                        </a>
+                        <a href="#">
+                            <li>Jobs</li>
+                        </a>
+                        <a href="#">
+                            <li>Subscriptions</li>
+                        </a>
+                        <a href="#">
+                            <li>Talent Workshops</li>
+                        </a>
+                        <a href="#">
+                            <li>CPSC Certificates</li>
+                        </a>
+                        <a href="#">
+                            <li>Ratings</li>
+                        </a>
+                        <a href="#">
+                            <li>Shop Help</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
                     </ul>
                 </div>
                 <div>
-                    <h5>SITES</h5>
+                    <a href="#">
+                        <h5>SITES</h5>
+                    </a>
                     <ul>
-                        <li>DC</li>
-                        <li>MAD Magazine</li>
-                        <li>DC Kids</li>
-                        <li>DC Universe</li>
-                        <li>DC Power Visa</li>
+                        <a href="#">
+                            <li>DC</li>
+                        </a>
+                        <a href="#">
+                            <li>MAD Magazine</li>
+                        </a>
+                        <a href="#">
+                            <li>DC Kids</li>
+                        </a>
+                        <a href="#">
+                            <li>DC Universe</li>
+                        </a>
+                        <a href="#">
+                            <li>DC Power Visa</li>
+                        </a>
 
                     </ul>
                 </div>
@@ -126,17 +184,24 @@ footer {
 
         ul {
             font-size: 0.6rem;
-            color: $grey-font;
             margin-bottom: 15px;
 
-            li {
-                margin-bottom: 5px;
+            a {
+                color: $grey-font;
+
+                &:hover {
+                    color: $white-font;
+                }
+
+                li {
+                    margin-bottom: 5px;
+                }
             }
         }
 
         #dc-logo-bg {
             position: absolute;
-            right: 40px;
+            right: -20px;
             bottom: -50px;
 
             img {
@@ -177,6 +242,5 @@ footer {
             }
         }
     }
-}
-</style>
+}</style>
 

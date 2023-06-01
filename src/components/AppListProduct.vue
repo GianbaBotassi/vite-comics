@@ -18,8 +18,15 @@ export default {
 
 <template>
     <section>
-        <div id="product-container" class="container">
-            <AppProduct v-for="(product, index) in myJson" :item="product" :key="index" />
+        <div class="container">
+            <span id="current-series">CURRENT SERIES</span>
+            <div id="product-container">
+                <AppProduct v-for="(product, index) in myJson" :item="product" :key="index" />
+                <!-- Ciclo product dal Json importato, legandolo al figlio con :item="product" -->
+            </div>
+            <div id="load-more">
+                <span>LOAD MORE</span>
+            </div>
         </div>
     </section>
 </template>
@@ -30,12 +37,34 @@ export default {
 
 section {
     background-color: $dark-grey;
-}
+    padding-bottom: 20px;
 
-#product-container {
-    @include flex-content(center);
-    flex-wrap: wrap;
-    gap: 25px 15px;
-    padding: 30px 0;
+    .container {
+        position: relative;
+
+        span {
+            background-color: $blue;
+            color: $white-font;
+            padding: 5px 20px;
+        }
+
+        #current-series {
+            position: absolute;
+            left: 0;
+            top: -15px
+        }
+
+        #product-container {
+            @include flex-content(center);
+            flex-wrap: wrap;
+            gap: 25px 15px;
+            padding: 30px 0;
+        }
+
+        #load-more {
+            font-size: 0.5rem;
+            text-align: center;
+        }
+    }
 }
 </style>

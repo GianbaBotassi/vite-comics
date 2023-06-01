@@ -1,19 +1,22 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
-import AppFooter from './components/AppFooter.vue'
+import AppHero from './components/AppHero.vue'
 import AppListProduct from './components/AppListProduct.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   components: {
     AppHeader,
-    AppFooter,
-    AppListProduct
+    AppHero,
+    AppListProduct,
+    AppFooter
   }
 }
 </script>
 
 <template>
   <AppHeader />
+  <AppHero />
   <AppListProduct />
   <AppFooter />
 </template>
